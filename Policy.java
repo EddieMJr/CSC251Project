@@ -21,7 +21,19 @@ public class Policy
       height = 0;
       weight = 0;
    }
-   
+
+   /**
+    * Constructor that initializes all fields.
+    * 
+    * @param pNumber The policy number
+    * @param pName The provider name
+    * @param fName The policyholder's first name
+    * @param lName The policyholder's last name
+    * @param a The policyholder's age
+    * @param sStatus The smoking status (smoker/non-smoker)
+    * @param h The height in inches
+    * @param w The weight in pounds
+    */
    public Policy(String pNumber, String pName, String fName, String lName,int a, String sStatus, double h, double w)
    {
       policyNumber = pNumber;
@@ -35,42 +47,73 @@ public class Policy
    }
    
    //setters//
-
+   /**
+    * Sets the policy number.
+    * @param pNumber The policy number
+    */
    public void setPolicyNumber(String pNumber)
    {
       policyNumber = pNumber;
    }
-   
+
+   /**
+    * Sets the provider name.
+    * @param pName The provider name
+    */
    public void setProviderName(String pName)
    {
       providerName = pName;
    }
-   
+
+   /**
+    * Sets the first name.
+    * @param fName The first name
+    */
    public void setFirstName(String fName)
    {
       firstName = fName;
    }
-   
+
+   /**
+    * Sets the last name.
+    * @param lName The last name
+    */
    public void setLastName(String lName)
    {
       lastName = lName;
    }
-   
+
+   /**
+    * Sets the age.
+    * @param a The age
+    */
    public void setAge(int a)
    {
       age = a;
    }
-   
+
+   /**
+    * Sets the smoking status.
+    * @param sStatus The smoking status
+    */
    public void setSmokingStatus(String sStatus)
    {
       smokingStatus = sStatus;
    }
-   
+
+   /**
+    * Sets the height.
+    * @param h The height in inches
+    */
    public void setHeight(double h)
    {
       height = h;
    }
-   
+
+   /**
+    * Sets the weight.
+    * @param w The weight in pounds
+    */
    public void setWeight(double w)
    {
       weight = w;
@@ -78,49 +121,85 @@ public class Policy
 
    
    //getters//
-   
+
+   /**
+    * Gets the policy number.
+    * @return The policy number
+    */
    public String getPolicyNumber()
    {
       return policyNumber;
    }
-   
+
+   /**
+    * Gets the provider name.
+    * @return The provider name
+    */
    public String getProviderName()
    {
       return providerName;
    }
-   
+
+   /**
+    * Gets the first name.
+    * @return The first name
+    */
    public String getFirstName()
    {
       return firstName;
    }
-   
+
+   /**
+    * Gets the last name.
+    * @return The last name
+    */
    public String getLastName()
    {
       return lastName;
    }
-   
+
+   /**
+    * Gets the age.
+    * @return The age
+    */
    public int getAge()
    {
       return age;
    }
-   
+
+   /**
+    * Gets the smoking status.
+    * @return The smoking status
+    */
    public String getSmokingStatus()
    {
       return smokingStatus;
    }
-   
+
+   /**
+    * Gets the height.
+    * @return The height in inches
+    */
    public double getHeight()
    {
       return height;
    }
-   
+
+   /**
+    * Gets the weight.
+    * @return The weight in pounds
+    */
    public double getWeight()
    {
       return weight;
    }
    
       
-   //Calculates the Policyholder's BMI
+   /**
+    * Calculates the policyholder's BMI.
+    * 
+    * @return The BMI value
+    */
    public double getBMI()
    {
       final double CONVFACTOR = 703;
@@ -128,7 +207,11 @@ public class Policy
       return (weight * CONVFACTOR) / (height * height);
    }
    
-   //Calculates the Policy's price
+   /**
+    * Calculates the policy price based on age, smoking status, and BMI.
+    * 
+    * @return The calculated policy price
+    */
    public double getPrice()
    {
       final double BASE_PRICE = 600;
